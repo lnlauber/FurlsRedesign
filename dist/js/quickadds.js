@@ -278,7 +278,7 @@ var quickadds = [
     price: 84,
     sale: false,
     saleType: '',
-    img: 'https://cdn.shopify.com/s/files/1/0166/0254/files/alphas-topNav.png?v=1600288389',
+    img: 'https://cdn.shopify.com/s/files/1/0166/0254/files/alphaseries-crochet-hooks-group-01.jpg?3226771034739786891',
     styleSpan: true,
     styles:[
       {
