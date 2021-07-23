@@ -278,7 +278,7 @@ var quickadds = [
     price: 84,
     sale: false,
     saleType: '',
-    img: './img/products/Alpha.jpg',
+    img: 'https://cdn.shopify.com/s/files/1/0166/0254/files/alphas-topNav.png?v=1600288389',
     styleSpan: true,
     styles:[
       {
