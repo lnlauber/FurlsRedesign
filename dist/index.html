@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furls Cart Redesign</title>
+  <link rel="stylesheet" href="./css/siteContainerStyles.css">
+  <link rel="stylesheet" href="./css/components/cart.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container__header">
+      <div>
+        <div class="profile"><img
+            src="https://cdn.shopify.com/s/files/1/0166/0254/files/account-icon-small.png?v=1622819195"
+            alt="Access your account" class='icon'></div>
+        <div class="favorites">
+          <img src="https://cdn.shopify.com/s/files/1/0166/0254/files/heartIcon.png?v=1624989072"
+            alt="Access your wishlist" class='icon'>
+        </div>
+      </div>
+      <a href="https://www.furlscrochet.com" class="logo"><img
+          src="https://cdn.shopify.com/s/files/1/0166/0254/files/furlsfiberarts-logo_1.png?v=1622229073"
+          alt="FurlsCrochet" class='logo-image'></a>
+      <div>
+        <div class="search"><img
+            src="https://cdn.shopify.com/s/files/1/0166/0254/files/search-icon-small.png?v=1622819195"
+            alt="Search our website" class='icon'></div>
+        <div class="cart"><img src="https://cdn.shopify.com/s/files/1/0166/0254/files/cart-icon-small.png?v=1622819195"
+            alt="Access your current cart" class='icon'>
+          <span class='cart-count'></span></=>
+      </div>
+    </div>
+  </header>
+  <section id="sub-header">
+    <div class="sixteen columns clearfix">
+      <div id="nav">
+        <ul id="menu" style="display: flex;">
+          <li class="menuLink" id="NewNow">
+            <a href="#" id="NewNowLink">New &amp; Now <span class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="WholesaleProducts" style="display: none;">
+            <a href="#" id="WholesaleProductsLink">Wholesale Products <span
+                class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="HooksNeedles">
+            <a href="#" id="HooksNeedlesLink">Hooks &amp; Needles <span
+                class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="Yarn">
+            <a href="#" id="YarnLink">Yarn <span class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="Accessories">
+            <a href="#" id="AccessoriesLink">Accessories <span
+                class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="AboutFurls">
+            <a href="https://furlscrochet.com/pages/about-us" id="AboutFurlsLink">About Furls <span
+                class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="Patterns">
+            <a href="#" id="PatternsLink">Patterns <span class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="Tutorials">
+            <a href="#" id="TutorialsLink">Tutorials <span class="topNavPlus"></span></a>
+          </li>
+          <li class="menuLink" id="Blog">
+            <a href="#" id="BlogLink">Blog <span class="topNavPlus"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="redesignAbout">
+    <div class="container__about">
+      <div class="about__header">
+        <h2>Cart Upsale</h2>
+        <a href="./cart.html" target="_blank" referrerpolicy="noreferrer">Click here to view Redesign →</a>
+      </div>
+      <div class="about__description">
+        <p>For the cart upsale I started with an empty cart, and designed the quick adds to transition to the sidebar when an item is added to the cart. </p>
+        <p>One of the biggest complaints I've heard from other customers, and experienced as a customer myself, was the quantity of buttons under some items. To combat this problem I decided to combine like items into a single element. To keep brand consistency I modeled these off each item's individual page, and allowed the user to select both style and size where applicable. For user experience the corresponding style or size options will disable after a selection is made.</p>
+        <p>Once an item has been selected, including both size and style for hooks, it will be automatically added to the cart. Once an item is in the cart all quick add items will be moved to the sidebar and size adjusted to fit. All quick add items and styles will remain. No more filtered sizes.</p>
+        <p>An additional idea to fit more quick add items on the page in a friendly way would be to have the quick add content in a carousel that would cycle through multiple products when not in focus, but stop scrolling when focused to allow user selection.</p>
+        <p>For mobile responsiveness once a mobile breakpoint is hit the quick add items will move below the cart and display in a column. This is where the carousel would be the most beneficial as it would remove the expectation for the user to scroll.</p>
+        
+      </div>
+      <div class="about__header">
+        <h2>Pattern Round Up</h2>
+        <a href="./patternRoundUp.html" target="_blank" referrerpolicy="noreferrer">Click here to view Design →</a>
+      </div>
+      <div class="about__description">
+        <p>For the pattern round up I kept with a basic gallery design, but added a expansion on hover or focus to display the patterns suggest yarn weight and hook size, as well as the designer.</p>
+        <p>The pattern round up is shown with the twelve most recent crochet patterns from the furls blog, as well as shopping links for furls yarn and hooks where applicable.</p>
+        <p>For mobile responsiveness, each block is set with a minimum with and using flex will wrap to show the maximum number of blocks per line possible for all devices.</p>
+
+        
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

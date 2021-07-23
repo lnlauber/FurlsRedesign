@@ -1,0 +1,460 @@
+@import '../abstracts/variables';
+
+
+
+.cart{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: relative; 
+  &__container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 1rem;
+    max-width: $website-width; 
+    width: 100%;
+    &__header{
+      max-width: 750px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: auto;
+      border-bottom: 1px solid $dark; 
+      h2{
+        font-size: 2.5rem; 
+        margin: 1rem 0;
+      }
+    }
+    &__content{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__content{
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    &__clear{
+      display: inline-block;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      padding: 10px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &__emptymessage{
+      display: none;
+    }
+    &__item{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-bottom: solid 1px $dark; 
+      img{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        padding: 3px;
+        border: 1px solid $medium;
+      }
+      &__details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        &__name{
+          text-align: left;
+          width: 100%;
+        }
+        &__description{
+          width: 50%;
+          text-align: left;
+        }
+        &__quantity{
+          max-height: 1.5rem;
+          max-width: 3rem; 
+          margin: auto;
+
+        }
+      }
+    }
+  }
+ &.empty{
+  .cart__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: $website-width; 
+    &__header{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid $dark;
+      h2{
+        font-size: 2.5rem; 
+        margin: 1rem 0;
+      }
+    }
+  }
+  .cart__content__clear{
+    display: none;
+  }
+  .cart__content__emptymessage{
+    display: inline-block;
+  }
+  .quickadd{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    &__content{  
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  } 
+ }
+}  
+
+.quickadd{
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  &__header{
+    width: 100%;
+    padding-top: none; 
+    border-bottom: 1px solid $dark;
+    font-size: 1.75rem; 
+  }
+  &__content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    position: relative;
+    background-color: $light;
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    min-width: 200px;
+    max-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    &__price{
+      padding: 0;
+      margin: 0;
+    }
+    &__description{
+      h5{
+        margin: 5px;
+        text-align: center;
+      }
+    }
+    &__label{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        border-radius: 50%;
+        max-width: 75%;
+        padding: 3px;
+        border: solid 1px $medium;
+      }
+    }
+    &__options{
+      position: absolute;
+      display: flex;
+      opacity: 0;
+      transform: scale(.01);
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      width: 100%;
+      margin: auto;
+      z-index: 100;
+      background-color: $light;
+      min-height: 100%; 
+      border-radius: 5px;
+      border-top: 1px solid $dark;
+      .styles{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: .5rem; 
+        justify-content: center;
+        li{ 
+          height: 2.5rem;
+          width: 2.5rem;
+          color: $light;
+          border-radius: 50%;  
+          span{
+            display: none; 
+          }
+          &:hover, &.selected{
+            position: relative;
+            overflow:visible;
+            span{
+              display: block; 
+              position: absolute;
+              line-height: 2.5rem;
+              font-size: 1.5rem;
+              margin: 0;
+              min-width: 200%;
+              text-align: center; 
+              background: inherit;
+              border-radius: 5px; 
+              left: -50%;
+              border: 1px solid $dark;
+              padding: 0 5px;
+              z-index: 10;
+            }
+          }
+        }
+        .tunisian{
+          height: 2.5rem;
+          width: auto;
+          line-height: 2.5rem;
+          padding: 0 5px;
+          color: $light;
+          border-radius: 5px;
+          background-color: $black;
+          &:hover, &.selected {  
+            transform: scale(1.2);
+          } 
+        }
+      }
+      .sizes{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;          
+        li{
+          margin: 3px;
+          width: 6.5rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          background-color: $light;
+          border-radius: 5px;
+          border: 1px solid $dark;
+          text-align: center; 
+          &:hover, &.selected{
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+      }
+      .colors{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        li{
+          margin: 3px;
+          width: 6.5rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          border-radius: 5px;
+          color: $light;
+          border: 1px solid $dark;
+          text-align: center;
+          &:disabled{ 
+            background-color: grey;
+          } 
+          &:hover, &.selected{
+            cursor: pointer; 
+            border: 1px solid $medium;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &:hover, &.selected{
+      .quickadd__item__options{
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.sale__flag{
+  background-color: $red;
+  height: 2rem;
+  position: absolute;
+  margin-right: 0;
+  min-width: 25%; 
+  padding: 0 10px;
+  color: $light;
+  top: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 5px; 
+  right: 1rem;
+}
+// Odyssey Background Colors
+.ody{
+  &-blac{
+    background-color: $black;
+  }
+  &-silv{
+    background-color: $silver;
+  }
+  &-red{
+    background-color: $red;
+  }
+  &-purp{
+    background-color: $purple;
+  }
+  &-peac{
+    background-color: $peach;
+  }
+  &-turq{
+    background-color: $turquoise;
+  }
+  &-navy{
+    background-color: $navy;
+  }
+  &-blue{
+    background-color: $blue;
+  }
+  &-pink{
+    background-color: $pink;
+  }
+  &-yell{
+    background-color: $yellow;
+    color: $dark !important; 
+  }
+  &-whit{
+    background-color: $white;
+    color: $dark !important;
+  }
+  &-lime{
+    background-color: $lime;
+  }
+
+
+
+
+}
+//Wander Background Colors
+.wander{
+  &-mist{
+    background-color: $mist;
+    color: $dark !important;
+  }
+  &-snow{
+    background-color: $snow;
+    color: $dark !important;
+  }
+  &-ambr{
+    background-color: $ambr;
+  }
+  &-that{
+    background-color: $that;
+  }
+  &-sunr{
+    background-color: $sunr;
+  }
+  &-pome{
+    background-color: $pome;
+  }
+  &-drag{
+    background-color: $drag;
+  }
+  &-velv{
+    background-color: $velv;
+  }
+  &-surf{
+    background-color: $surf;
+  }
+  &-amet{
+    background-color: $amet;
+  }
+  &-mead{
+    background-color: $mead;
+  }
+  &-cana{
+    background-color: $cana;
+  }
+  &-midn{
+    background-color: $midn;
+  }
+  &-cobb{
+    background-color: $cobb;
+  }
+}
+//Wooden Background Colors{
+.teak{
+  background-color: $teak !important;  
+}
+//Alpha Background Images{
+.alpha{
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-coco{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-04.jpg?2041272514554645348);
+  }
+  &-tuli{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-02.jpg?2041272514554645348);
+  }
+  &-rose{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-03.jpg?2041272514554645348);
+  }
+  &-blac{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-01.jpg?2041272514554645348);
+  }
+  &-bloo{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-07.jpg?2041272514554645348);
+  }
+  &-purp{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-05.jpg?2041272514554645348);
+  }
+  &-oliv{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-swatches-06.jpg?2041272514554645348);
+  }
+  &-boco{
+    background-image: url(https://cdn.shopify.com/s/files/1/0166/0254/files/alpha-bocote-thumbnail-1.jpg?v=1594050232);
+  }
+} 
+
+.no-stock{
+  border: 1px solid darken($color: grey, $amount: 2) !important;
+  position: relative;
+  color: $dark !important;
+  background-color: $medium !important;
+  background-image:
+    linear-gradient(to top left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) calc(50% - 1px),
+        rgb(0, 0, 0) 50%,
+        rgba(0, 0, 0, 0) calc(50% + 1px),
+        rgba(0, 0, 0, 0) 100%);
+
+}  
+
+@media screen and (max-width: 700px) {
+  .cart__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+}
